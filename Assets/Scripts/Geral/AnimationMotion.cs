@@ -6,10 +6,11 @@ public class AnimationMotion : MonoBehaviour
 {
 
 	public float animation_time;
+	public string next_scene;
 
 	void Start () 
 	{
-		StartCoroutine(NextScene(animation_time, "Orgalfabeto"));
+		StartCoroutine(NextScene(animation_time, next_scene));
 	}
 	
 	IEnumerator NextScene(float tempo, string next)
