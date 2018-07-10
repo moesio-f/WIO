@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
 		}
 		else 
 		{
-			text.text = (Tempo - (int)Time.timeSinceLevelLoad).ToString();
+			text.text = "Fim do tempo";
 		}
 		
 	}

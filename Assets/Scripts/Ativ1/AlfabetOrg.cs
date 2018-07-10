@@ -37,7 +37,7 @@ public class AlfabetOrg : MonoBehaviour
 				Debug.Log(alfabeto.text);
 				if(alfabeto.text == LetterGenerator.ordem_correta)
 				{
-					UnityEngine.SceneManagement.SceneManager.LoadScene("QuebraCabeça");
+					UnityEngine.SceneManagement.SceneManager.LoadScene("Balões");
 				}
 			}
 		}

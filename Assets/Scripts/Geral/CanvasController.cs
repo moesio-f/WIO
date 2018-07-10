@@ -14,6 +14,7 @@ public class CanvasController : MonoBehaviour
 	public GameObject back;
 	public GameObject[] vogais;
 	public GameObject[] alfabeto;
+	public GameObject[] alfabeto2;
 
 	private string sceneName;
 	private int count;
@@ -71,7 +72,7 @@ public class CanvasController : MonoBehaviour
 	//Avançar e Esconder - ConhecendoAsLetrinhas
 	public void Next()
 	{
-		if (count.Equals (0)) 
+		if (count.Equals(0)) 
 		{
 			foreach(GameObject a in vogais)
 			{
@@ -85,6 +86,19 @@ public class CanvasController : MonoBehaviour
 			back.SetActive(true);
 			count++;
 		}
+		else if (count.Equals(1)) 
+		{
+			foreach(GameObject a in alfabeto)
+			{
+				a.SetActive(false);
+			}
+			foreach(GameObject a in alfabeto2)
+			{
+				a.SetActive(true);
+			}
+
+			count++;
+		}
 		else
 		{
 			ChangeScene("OrgAlfabeto");
@@ -94,16 +108,33 @@ public class CanvasController : MonoBehaviour
 	//Voltar e Esconder - ConhecendoAsLetrinhas
 	public void Back()
 	{
-		foreach(GameObject a in alfabeto)
+		if (count.Equals(1)) 
 		{
-			a.SetActive(false);
+			foreach (GameObject a in alfabeto) 
+			{
+				a.SetActive (false);
+			}
+			foreach (GameObject a in vogais) 
+			{
+				a.SetActive (true);
+			}
+
+			back.SetActive(false);
+			count--;
 		}
-		foreach(GameObject a in vogais)
+		else if(count.Equals(2))
 		{
-			a.SetActive(true);
+			foreach (GameObject a in alfabeto2) 
+			{
+				a.SetActive (false);
+			}
+			foreach (GameObject a in alfabeto) 
+			{
+				a.SetActive (true);
+			}
+
+			count--;
 		}
-		back.SetActive(false);
-		count--;
 	}
 
 

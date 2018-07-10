@@ -25,8 +25,11 @@ public class PauseInterface : MonoBehaviour {
 		case "CaçaPalavras":
 			textos[1].text = "Palavras";
 			break;
+		case "Balões":
+			textos [1].text = "Letras";
+			break;
 		default:
-			textos[1].text = "nada";
+			textos[1].text = "Error 0820";
 			break;
 		}
 
