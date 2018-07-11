@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
 		}
 		else 
 		{
-			text.text = "Fim do tempo";
+			Destroy(this.gameObject);
 		}
 		
 	}

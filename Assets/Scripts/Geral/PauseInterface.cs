@@ -28,6 +28,9 @@ public class PauseInterface : MonoBehaviour {
 		case "Balões":
 			textos [1].text = "Letras";
 			break;
+		case "LigueAsLetrinhas":
+			textos [1].text = "Letras";
+				break;
 		default:
 			textos[1].text = "Error 0820";
 			break;

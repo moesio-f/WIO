@@ -30,7 +30,7 @@ public class CanvasController : MonoBehaviour
 		count = 0;
 		sceneName = SceneManager.GetActiveScene().name;
 		
-		if(sceneName != "MainMenu" && sceneName != "Ajustes" && sceneName != "Animação" && sceneName != "ConhecendoAsLetrinhas")
+		if(sceneName != "MainMenu" && sceneName != "Ajustes" && sceneName != "Animação" && sceneName != "ConhecendoAsLetrinhas" && sceneName != "Créditos")
 		{
 			StartCoroutine(Fade(PanelTime));
 		}
@@ -43,6 +43,14 @@ public class CanvasController : MonoBehaviour
 	public void ChangeScene(string scene)
 	{
 		SceneManager.LoadScene (scene);
+	}
+
+	//Troca de cena especial
+	public void ResetScene()
+	{
+		PanelTime = 0;
+		ChangeScene(SceneManager.GetActiveScene().name);
+		Check.ResetStatics();
 	}
 
 	//Sair do Jogo
