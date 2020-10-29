@@ -9,10 +9,3 @@ Esta primeira versão irá conter as seguintes atividades:
 * Quebra Cabeça
 * Jogo da Memória 
 * Ligue as Letras
-
-
-
-Para mais informações, entre em contato com a gente:
-  Programador:
-  Moésio Filho
-  moesiof.dev@gmail.com
